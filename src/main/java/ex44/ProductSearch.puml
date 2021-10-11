@@ -1,0 +1,29 @@
+@startuml
+
+'Inputs happen here, App calls ProductSearch to print'
+class App
+{
+    +void main()
+}
+
+'Checks the json file for the products and prints'
+class ProductSearch
+{
+    'Attributes'
+    +String name
+    +double price
+    +int quantity
+
+    'Functions'
+    +String getName()
+    +double getPrice()
+    +int getQuantity()
+
+    'Functions'
+    +ArrayList<ProductSearch> productOutput()
+    +void printProduct()
+}
+
+App o--> ProductSearch
+
+@enduml
